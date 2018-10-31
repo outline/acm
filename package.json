@@ -1,0 +1,11 @@
+{
+  "name": "outline-acm",
+  "version": "0.0.1",
+  "engines": {
+    "node": "8.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/outline/outline-acm.git"
+  }
+}

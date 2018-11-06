@@ -26,5 +26,5 @@ then
   ~/.acme.sh/acme.sh  --issue -d $DOMAIN  -d "*.$DOMAIN"  --dns dns_cf
 
   # Update the certificate in the live app
-  heroku certs:update "~/.acme.sh/$DOMAIN/fullchain.cer" "~/.acme.sh/$DOMAIN/$DOMAIN.key" --confirm --app $HEROKU_APP
+  heroku certs:update "/app/.acme.sh/$DOMAIN/fullchain.cer" "/app/.acme.sh/$DOMAIN/$DOMAIN.key" --confirm --app $HEROKU_APP
 fi

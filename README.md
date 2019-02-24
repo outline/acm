@@ -1,3 +1,3 @@
 # outline-acm
 
-Script to run on Heroku and automatically manage a wildcard SSL certificate from LetsEncrypt
+This script can be run on Heroku using CRON and will automatically create and manage a wildcard SSL certificate issued by LetsEncrypt.

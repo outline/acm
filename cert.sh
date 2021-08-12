@@ -23,7 +23,7 @@ then
   export CF_Key=$CLOUDFLARE_API_KEY
 
   # Generate wildcard certificate (this will take approx 130s)
-  ~/.acme.sh/acme.sh  --issue -d $DOMAIN  -d "*.$DOMAIN"  --dns dns_cf
+  ~/.acme.sh/acme.sh --set-default-ca --issue -d $DOMAIN  -d "*.$DOMAIN"  --dns dns_cf
 
   # Update the certificate in the live app
   heroku certs:update "/app/.acme.sh/$DOMAIN/fullchain.cer" "/app/.acme.sh/$DOMAIN/$DOMAIN.key" --confirm $HEROKU_APP --app $HEROKU_APP

@@ -8,8 +8,9 @@ set -e
 # HEROKU_API_KEY
 # HEROKU_APP
 
-# Only run once per week (Heroku scheduler runs daily)
-if [ "$(date +%u)" = 1 ]
+# Only run once per week (Heroku scheduler runs daily) or if there are arguments
+# This allows passing --force to force a run
+if [ "$(date +%u)" = 1 ] || [ "$#" -eq 1 ]
 then
   # Download dependencies
   git clone https://github.com/Neilpang/acme.sh.git

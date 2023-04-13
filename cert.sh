@@ -16,6 +16,9 @@ then
   git clone https://github.com/Neilpang/acme.sh.git
   cd ./acme.sh
 
+  # Checkout a specific version to ensure it doesnt break
+  git checkout 8718b15
+
   # Force ensures it doesnt fail because of lack of cron
   ./acme.sh --install --force
 
